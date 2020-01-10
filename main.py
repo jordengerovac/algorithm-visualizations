@@ -65,7 +65,7 @@ def bubble_sort():
 items = [canvas.create_text(xstart + xdelta*i, ydigit, text=str(digit))
          for i, digit in enumerate(digits)]
 
-bars = [canvas.create_rectangle(120 + (30 * i), 300 + (20*digit), 100 + (30 * i), ybar, fill='grey') for i, digit in enumerate(digits)]
+bars = [canvas.create_rectangle(120 + (30 * i), 100 + (20*digit), 100 + (30 * i), ybar, fill='grey') for i, digit in enumerate(digits)]
 
 canvas.update()
 sleep(tdelta)

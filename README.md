@@ -1,2 +1,2 @@
 # algorithm-visualization
-Visualizations of a few different algorithms using Python and Tkinter
+visualizations of a few different algorithms using Python and Tkinter

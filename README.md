@@ -1,2 +1,2 @@
-# bubble-sort-visualization
-Visualization of bubble sort algorithm using Tkinter
+# algorithm-visualization
+Visualizations of a few different algorithms using Python and Tkinter

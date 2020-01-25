@@ -8,7 +8,7 @@ root = Tk()
 root.title("A* Path Visualization")
 tdelta = 0.2
 
-canvas = Canvas(root, bg='white', width='600', height='600')
+canvas = Canvas(root, bg='white', width='600', height='620')
 canvas.pack()
 
 # This sets the WIDTH and HEIGHT of each grid location
@@ -41,6 +41,8 @@ for row in range(len(grid)):
         blocks[row][col] = canvas.create_rectangle((MARGIN + WIDTH) * col + MARGIN, (MARGIN + HEIGHT) * row + MARGIN,
                                                    (MARGIN + WIDTH) * col + (MARGIN + WIDTH),
                                                    (MARGIN + HEIGHT) * row + (MARGIN + HEIGHT), fill=color)
+# instructions
+canvas.create_text(300, 612, text="Draw walls, then press space to start the simulation. Press c to clear the board.")
 
 
 # ADDING MOUSE EVENTS TO THE GRID (find a way to make this more accurate)
@@ -53,6 +55,7 @@ def cell_clicked(event):
         grid[row_val][col_val] = 1
 
 
+# calling the a* function and colouring the path yellow
 def start_sim(event):
     pathway = astar(grid, start_pos, end_pos)
 
@@ -65,6 +68,7 @@ def start_sim(event):
             canvas.update()
 
 
+# clear the board
 def clear_board(event):
     for i in range(len(grid)):
         for j in range(len(grid[row])):
